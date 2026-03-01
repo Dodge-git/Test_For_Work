@@ -1,0 +1,27 @@
+run:
+  timeout: 5m
+  tests: true
+
+linters:
+  enable:
+    - govet
+    - errcheck
+    - staticcheck
+    - revive
+    - unused
+    - gosimple
+    - ineffassign
+    - typecheck
+
+linters-settings:
+  revive:
+    rules:
+      - name: var-naming
+      - name: indent-error-flow
+      - name: empty-block
+
+issues:
+  exclude-dirs:
+    - migrations
+  max-issues-per-linter: 0
+  max-same-issues: 0
